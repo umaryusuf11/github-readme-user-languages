@@ -1,5 +1,7 @@
 const guls = require("guls");
 const { createCanvas } = require("canvas");
+const express = require('express');
+const app = express();
 
 const colors = {
   "1C Enterprise": {
@@ -2288,12 +2290,16 @@ function generateImage(langs) {
     writeY += 30;
   });
 
-  return canvas.toBuffer();
+  return canvas.toBuffer('image/png');
 }
 
-export default async function handler(req, res) {
-  let username = req.query.user;
-  let langs = await guls(username);
+app.get('/', async (req, res) => {
+    let username = req.query.user;
+    let langs = await guls(username);
+    
+    res.setHeader('Content-Type', 'image/png');
+    res.send(generateImage(langs));
+});
 
-  res.send(generateImage(langs));
-}
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))

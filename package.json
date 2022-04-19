@@ -1,23 +1,26 @@
 {
   "name": "github-readme-user-languages",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "now-build": "yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && npm run build",
-    "start": "next start",
-    "deploy": "now"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umaryusuf11/github-readme-user-languages.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umaryusuf11/github-readme-user-languages/issues"
+  },
+  "homepage": "https://github.com/umaryusuf11/github-readme-user-languages#readme",
   "dependencies": {
-    "next": "12.1.5",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "canvas": "^2.5.0",
+    "canvas": "^2.9.1",
+    "express": "^4.17.3",
     "guls": "^1.0.0"
-  },
-  "devDependencies": {
-    "eslint": "8.13.0",
-    "eslint-config-next": "12.1.5"
   }
 }
