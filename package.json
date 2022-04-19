@@ -23,6 +23,7 @@
   "homepage": "https://github.com/umaryusuf11/github-readme-user-languages#readme",
   "dependencies": {
     "canvas": "^2.5.0",
-    "guls": "^1.0.0"
+    "guls": "^1.0.0",
+    "react": "^18.0.0"
   }
 }
