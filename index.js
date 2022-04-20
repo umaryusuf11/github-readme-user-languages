@@ -2255,7 +2255,7 @@ const colors = {
 };
 
 function generateImage(langs) {
-  let width = 350;
+  let width = 300;
   let height = 60 + 5 + 30 * langs.length;
   let bgColor = "#1a1b27";
   let borderColor = "#fff";
@@ -2272,12 +2272,12 @@ function generateImage(langs) {
   ctx.strokeRect(0, 0, width, height);
 
   /* title */
-  ctx.font = "30px Arial";
+  ctx.font = "20.8px Arial";
   ctx.fillStyle = titleColor;
   ctx.fillText("Languages", 20, 40);
 
   /* languages */
-  ctx.font = "20px Arial";
+  ctx.font = "16px Arial";
 
   let writeY = 80;
   langs.forEach((lang) => {
