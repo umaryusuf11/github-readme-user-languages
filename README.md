@@ -24,6 +24,8 @@ You can then deploy to a new heroku app like so,
 ```bash
 git clone https://github.com/umaryusuf11/github-readme-user-languages.git
 
+cd github-readme-user-languages
+
 heroku create -a github-readme-user-languages
 
 heroku git:remote -a github-readme-user-languages
